@@ -1,11 +1,9 @@
 let model;
-const compare = tf.tensor1d([0.5], dtype = 'float32')
 const webcam = new Webcam(document.getElementById('wc'));
 let isPredicting = false;
 
 async function loadModel(){
     model = await tf.loadLayersModel("Model/js_model/model.json");
-    console.log('Var: '+compare)
     return (model);
     
 }
@@ -19,14 +17,20 @@ async function predict(){
         });
         classId = (await output.data())[0];
         console.log(classId);
-        if(classId ==1){
-            predictionText = "I see a Dog";
+        if(classId == 0){
+            predictionText = "0 degrees";
         }
-        else if(classId == 0){
-            predictionText = "I see a Cat";
+        else if(classId == 1){
+            predictionText = "45 degrees left";
         }
-        else if(classId == 2){
-            predictionText = "No Cat or Dog";
+        else if(classId==2){
+            predictionText = "45 degrees right";
+        }
+        else if(classId==3){
+            predictionText = "90 degrees left";
+        }
+        else {
+            predictionText = "90 degrees right";
         }
         document.getElementById("prediction").innerText = predictionText;
         
@@ -42,14 +46,20 @@ async function getPrediction(img){
     })
     const classId = (await output.data())[0];
     console.log(classId);
-        if(classId == 1){
-            predictionText = "I see a Dog";
+        if(classId == 0){
+            predictionText = "class 1";
         }
-        else if(classId == 0){
-            predictionText = "I see a Cat";
+        else if(classId == 1){
+            predictionText = "class 2";
         }
         else if(classId==2){
-            predictionText = "No Cat or Dog";
+            predictionText = "class 3";
+        }
+        else if(classId==3){
+            predictionText = "class 4";
+        }
+        else {
+            predictionText = "class 5";
         }
     document.getElementById("pred").innerText = predictionText;
     output.dispose();
@@ -66,11 +76,13 @@ function startPredicting(){
 
 function stopPredicting(){
     isPredicting = false;
+    predictionText = "Prediction will appear here!";
+    document.getElementById("prediction").innerHTML = predictionText;
     predict();
 }
 
 function saveModel(){
-    model.save("downloads://cat_dog_classifier");
+    model.save("downloads://palm_recognition");
 }
 
 

@@ -76,7 +76,7 @@ header {
 	padding-left: 20px;
 	margin-right: 0px;
 	height: 10vh;
-	width: 1500px;
+	width: auto;
 	text-align: left;
 	background-color: #000;
 	font-height: 60px;
@@ -100,7 +100,7 @@ html {
 
 body {
   height: 100vh;
-  width: 1270px;
+  width: auto;
   background-color: #1E1D1D;
   text-align: center;
   text-rendering: optimizeLegibility;
@@ -122,7 +122,7 @@ body {
   display: inline-block;
   text-align: center;
   height: 34px;
-  width: 151px;
+  width: auto;
   color: #E3E3E3;
   font-family: Arial;
   font-size: 30px;
@@ -181,13 +181,23 @@ body {
   margin-bottom: 0px;
   margin-top: 0px;
 }
-
-.author p {
+.author h3 {
   height: 50px;
   width: 350px;
   color: #E3E3E3;
   font-family: Calibri;
   font-size: 25px;
+
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.author p {
+  height: 30px;
+  width: 250px;
+  color: #E3E3E3;
+  font-family: Calibri;
+  font-size: 15px;
 
   margin-bottom: 0px;
   margin-top: 0px;
@@ -214,7 +224,24 @@ body {
   transition-duration: 0.4s;
   border-radius: 4px;
 }
+.horizontal-split {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  height: 1px;
+  width: auto;
+  border: 2px solid #808080;
+  box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.5);
+  text-align: center;
+}
 
+.promotion p{
+	margin-top: 20px;
+	text-align: center;
+	padding-top: 20px;
+	font-size: 18px;
+
+}
 .start:hover {
   background-color: #4CAF50; /* Green */
   color: white;
@@ -230,4 +257,86 @@ body {
 .profile:hover {
 	background-color: black;
 	color: white;
+}
+.see:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.pred {
+	margin: 10px;
+	padding: 10px 0px;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+}
+
+
+footer {
+	height: 10vh;
+    background-color: #333;
+    padding: 50px;
+    font-size: 80%;
+    isolation: isolate;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child{
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.social-links li a:visited,
+.footer-nav li a:visited,
+.social-links li a:link {
+    text-decoration: none;
+    border: 0;
+    color: white;
+    
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active{
+    color: #bf6516;
+}
+.social-links li a:link,
+.social-links li a:visited{
+    font-size: 160%;
+}
+
+
+.footer ion-icon:hover
+{
+    color: aqua
+}
+
+footer p{
+    color: white;
+    text-align: center;
+    font-size: 90%;
+    margin-top: 20px; 
+    font-weight: 300
+}
+.footer-social {
+	height: 20px;
+	text-align: right;
+	display: block;
+	font-size: 10px;
+	color: white;
+
 }
