@@ -1,22 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Deep Learning GUI</title>
 	<link href="style.css" rel="stylesheet" type="text/css">
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.0.2/dist/tfjs-vis.umd.min.js"></script>
+    <script src="js/webcam.js"></script>
 </head>
 <header>
-	<div class="header">
-		Deep Learning GUI v1
-	</div>
+	Deep Learning GUI v1.0
 </header>
 <body>
+<div class="page">
+<div class="split-left">
 	<div class="body">
-		<p class="header-text">DLG V1</p>
-		<div class="model_name">
-			<div class="model_name_text">Your Model</div> 
+		<div class="model-name-container">
+			<div class="model-name-text">Your Model</div> 
+		</div>
+		<div class="webcam-container">
+			<div class="webcam-out">
+            	<video class="video" autoplay playsinline muted id="wc" width="400" height="300"></video>
 
+        	</div>
+        </div>
+    </div>
+    <div class="btn-container-1">
+    	<button class="button start" onclick="startPredicting()" >Start Predicting</button>
+	    <button class="button stop" onclick="stopPredicting()" >Stop Predicting</button>
+	    <button class="button download" onclick="saveModel()">Download Model</button>
+    </div>
+</div>
+<div class="split-line"></div>
+<div class="split-right">
+	<div class="author">
+		<h1>About the Creator</h1>
+		<h2>Publisher: Prashant Mishra</h2>
+		<p>Date: 23 June 2020</p>
+		<p>This model is used to detect palm angles.</p>
+		<div class="visit-profile">
+			<a href="https://github.com/prashant9316" class="button profile" target="_blank">visit profile</a>
 		</div>
 		
 	</div>
+</div>
+        
+		
+</div>	
 </body>
+<footer>
+	<script src="js/index.js"></script>
+</footer>
 </html>
