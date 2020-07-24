@@ -1,8 +1,9 @@
 # Deep Learning GUI v1.0
 <br>
-## Get your own website featuring your AI Model
+<h2> Get your own website featuring your AI Model </h2>
 <br>
-Send the following details to the email id:
+
+<h5>Send the following details to the email id:</h5>
 1. Your Name*   
 2. A link to your GitHub profile*  
 3. Name of the model*<br>
@@ -12,9 +13,9 @@ Send the following details to the email id:
 7. link to the model or attach the model with the mail*  
 8. Any other links that you want to share along with your AI Model.  
 9. Do your want the model to be downloadable*  
-
-The email id is pgmd.9873@gmail.com  
-visit the website: [Deep Learning GUI v1.0](https://prashant9316.github.com/deep-learning-gui-beta)  
-You will receive a link to your website on your email id.  
-It might take between 10 minutes to 30 minutes (approximately).  
-And then share your AI Model with your friends.  
+    
+The email id is pgmd.9873@gmail.com   
+visit the website: [Deep Learning GUI v1.0](https://prashant9316.github.io/Deep-Learning-GUI-beta/)    
+You will receive a link to your website on your email id.    
+It might take between 10 minutes to 30 minutes (approximately).    
+And then share your AI Model with your friends.    
