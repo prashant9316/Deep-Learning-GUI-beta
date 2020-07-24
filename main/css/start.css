@@ -1,0 +1,29 @@
+.info h1{
+  width: auto;
+  color: #E3E3E3;
+  font-family: Calibri;
+  font-size: 30px;
+  font-weight: 700;
+
+  margin-bottom: 20px;
+  margin-top: 25px;
+  display: inline-block;
+
+}
+.data {
+	text-align: left;
+	color: white;
+	font-size: 25px;
+	margin-left: 40vh;
+	padding: 10px;
+}
+.structure {
+	color: black;
+	background-color: #757272;
+	font-size: 20px;
+	width: auto;
+	display: inline-block;
+}
+.info {
+	font-weight: 500;
+}
