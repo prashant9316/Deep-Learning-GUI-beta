@@ -12,6 +12,11 @@ function get_model(model, layer_name){
 	return tf.model({inputs:model.inputs, outputs: model.getLayer(layer_name).output});
 }
 
+// to load the image and preprocess using the vgg preprocess input
+function load_and_preprocess_data(image_path){
+	return;
+}
+
 // Calculating content cost using mean squared error
 function content_cost(content, generated){
 	var c = content_model(content);
@@ -46,7 +51,7 @@ function gram_matrix(tensor){
 }
 
 
-function train(content_img, style_img, iterations = 20, alpha = 10.0, beta = 20.0){
+function train(content_image_path, style_image_path, iterations = 20, alpha = 10.0, beta = 20.0){
 
 	const content_img = load_and_preprocess_image(content_image_path);
 	const style_img = load_and_preprocess_image(style_image_path);
