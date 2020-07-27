@@ -87,12 +87,13 @@ class Webcam {
 
   async setup() {
     return new Promise((resolve, reject) => {
-      navigator.getUserMedia = navigator.getUserMedia ||
-          navigator.webkitGetUserMedia || navigator.mozGetUserMedia ||
-          navigator.msGetUserMedia;
+      navigator.getUserMedia = navigator.mediaDevices.getUserMedia || navigator.getUserMedia|| navigator.mozGetUserMedia|| navigator.msGetUserMedia;
       if (navigator.getUserMedia) {
-        navigator.getUserMedia(
-            {video: {width: 400, height: 300}},
+        navigator.mediaDevices.getUserMedia({
+          video: {
+              width: 400, 
+              height: 300}
+          }).then(
             stream => {
               this.webcamElement.srcObject = stream;
               this.webcamElement.addEventListener('loadeddata', async () => {
