@@ -5,7 +5,8 @@
 
 <br>
 Visit this link to get started with sharing your own model
-[Deep Learning GUI v1.0 - Get Started](https://prashant9316.github.io/Deep-Learning-GUI-beta/get_started.html)    
+  [Deep Learning GUI v1.0 - Get Started](https://prashant9316.github.io/Deep-Learning-GUI-beta/get_started.html)    
+  
 <br>
 <h3> For Any Queries</h3>
 
