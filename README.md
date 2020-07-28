@@ -7,7 +7,7 @@
 Visit this link to get started with sharing your own model
 [Deep Learning GUI v1.0 - Get Started](https://prashant9316.github.io/Deep-Learning-GUI-beta/get_started.html)  
 <br>
-# For Any Queries
+<h3> For Any Queries</h3>
 The email id is pgmd.9873@gmail.com   
 visit the website: [Deep Learning GUI v1.0](https://prashant9316.github.io/Deep-Learning-GUI-beta/)    
 You will receive a link to your website on your email id.    
