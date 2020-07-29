@@ -1,0 +1,92 @@
+/*==============================================*/
+/* Creating our own custom scrolling bar  */
+/*==============================================*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+/*==============================================*/
+/*Header */
+/*==============================================*/
+
+h1 {
+	color: white;
+}
+
+header {
+	padding-left: 20px;
+	margin-right: 0px;
+	height: 10vh;
+	width: auto;
+	text-align: left;
+	background-color: #000;
+	font-height: 60px;
+	font-width: 466px;
+	font-size: 35px;
+	font-family: Calibri;
+	font-weight: 700;
+	color: #E3E3E3;
+	line-height: 60px;
+	font-text-shadow: inset 2px 2px 3px rgba(0,0,0,0.5), 0 2px 4px rgba(255, 255, 255, 0.5);
+
+	background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+
+}
+/*==============================================*/
+/*End of Header */
+/*==============================================*/
+
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: auto;
+  background-color: #1E1D1D;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.model-name-container {
+	margin-top: 20px;
+	display: inline-block;
+	height: 50px;
+  	width: auto;
+  	border-radius: 8px;
+  	border: 4px solid #808080;
+  	box-shadow: 5px 4px 4px 0 rgba(0,0,0,0.5);
+  	text-align: center;
+  	padding-left: 20px;
+  	padding-right: 20px;
+    margin-bottom: 20px;
+}
+.model-name-text {
+  display: inline-block;
+  color: #E3E3E3;
+  font-family: Arial;
+  font-size: 30px;
+  line-height: 40px;
+}
