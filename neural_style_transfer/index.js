@@ -1,5 +1,6 @@
-let content_model;
-let style_model_1;
+var content_model;
+var style_models = [];
+const style_model_weights = 1.0 / 3;
 
 // function to load the vgg19 model 
 async function load_vgg(){
@@ -13,15 +14,27 @@ function get_model(model, layer_name){
 }
 
 // to load the image and preprocess using the vgg preprocess input
-function load_and_preprocess_data(image_path){
-	return;
+function load_and_preprocess_image(image_path){
+	var img = new Image();
+	img.src = image_path;
+
+	img.width = 224;
+	img.height = 224;
+
+	var img1 = document.createElement("img");
+	img1.src = image_path;
+	document.body.appendChild(img);
+	// show the image on the page
+	tensor = tf.browser.fromPixels(img).toFloat();
+	tensor = tensor.expandDims(axis = 0);
+	return tensor;
 }
 
 // Calculating content cost using mean squared error
 function content_cost(content, generated){
-	var c = content_model(content);
-	var g = content_model(generated);
-	return tf.reduce_mean(tf.square(C - G));
+	var C = content_model.predict(content);
+	var G = content_model.predict(generated);
+	return tf.sum(tf.square(C - G));
 }
 
 //calculating styling cost
@@ -29,13 +42,13 @@ function style_cost(style, generated){
 	var J_style = 0;
 
 	for(i=0;i<3;i++){
-		var a_S = style_models[i](style);
-		var a_G = style_models[i](generated);
+		var a_S = style_models[i].predict(style);
+		var a_G = style_models[i].predict(generated);
 		var GS = gram_matrix(a_S);
 		var GG = gram_matrix(a_G);
-		var current_cost = tf.reduce_mean(tf.square(GS-GG));
-		J_style = J_style + current_cost * style_model_weights;
-	return J_Style;
+		var current_cost = tf.sum(tf.square(GS-GG));
+		J_style = J_style + current_cost.mul(style_model_weights);
+	return J_style;
 	}
 }
 
@@ -44,8 +57,8 @@ function gram_matrix(tensor){
 	var temp = tensor;
 	temp = tf.squeeze(temp);
 	var fun = tf.reshape(temp, [temp.shape[2], temp.shape[0]*temp.shape[1]]);
-	var result = tf.matmal(temp, temp, transpose_b = True);
-	var gram = tf.expand_dims(result, axis = 0);
+	var result = tf.matMul(temp, temp, transpose_b = true);
+	var gram = tf.expandDims(result, axis = 0);
 
 	return gram;
 }
@@ -64,12 +77,13 @@ function train(content_image_path, style_image_path, iterations = 20, alpha = 10
 
 	console.log('All variables set up done!');
 
-	for(i=0;i<iterations;i++) {
+	for(i=0; i<iterations; i++) {
 		J_content = content_cost(content_img, generated);
-		J_style = content_cost(style_img, generated);
+		J_style = style_cost(style_img, generated);
 		const f = (J_content, J_style) => alpha*J_content + beta*J_style;
 		const g = tf.grads(f);
-
+		opt.minimize(g);
+		console.log('iteration: '+ String(i));
 	}
 
 }
@@ -84,14 +98,13 @@ async function init() {
 	content_model = get_model(vgg, 'block4_conv2');
 	console.log('Content model created!');
 	console.log('Now creating style models');
-	var style_models = [];
 	for(i = 0; i<3; i++){
-		style_models.push(get_model, 'block'+String(i)+'conv1');
+		style_models.push(get_model(vgg, 'block'+String(i+1)+'_conv1'));
 	}
 	console.log('Style models created');
 	console.log('Now you can choose your own style to transfer image from');
 	console.log('setting style model weights to 0.33');
-	const style_model_weights = 1.0 / 3;
+	train('content.jpg', 'style.jpg', 1);
 
 }
 
