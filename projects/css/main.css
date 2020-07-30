@@ -45,6 +45,7 @@
     display: block;
     margin-bottom: 20px;
   }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -57,6 +58,7 @@
 
 @media screen and (max-width: 500px) {
   .column {
+    margin-left: 20px;
     width: 100%;
     display: block;
     margin-bottom: 10px;
