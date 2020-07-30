@@ -5,12 +5,12 @@
 
 <br>
 Visit this link to get started with sharing your own model
-  [Deep Learning GUI v1.0 - Get Started](https://prashant9316.github.io/Deep-Learning-GUI-beta/get_started.html)    
+  [https://prashant9316.github.io/Deep-Learning-GUI-beta/get_started.html](Deep Learning GUI getting started)    
   
 <br>
 <h3> For Any Queries</h3>
 
-visit the website: [Deep Learning GUI v1.0](https://prashant9316.github.io/Deep-Learning-GUI-beta/)    
+visit the website: [https://prashant9316.github.io/Deep-Learning-GUI-beta/](Deep Learning GUI v0.1.3)    
 You will receive a link to your website on your email id.    
   
 And then share your AI Model with your friends.    
