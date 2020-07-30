@@ -8,7 +8,7 @@
 /* Float four columns side by side */
 .column {
   float: left;
-  width: 20%;
+  width: 16.5%;
   padding: 0 10px;
 }
 
@@ -23,7 +23,31 @@
 }
 
 /* Responsive columns */
+@media screen and (max-width: 1000px) {
+  .column {
+    width: 20%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
 @media screen and (max-width: 800px) {
+  .column {
+    width: 25%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .column {
+    width: 33%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
   .column {
     width: 50%;
     display: block;
@@ -35,10 +59,9 @@
   .column {
     width: 100%;
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
-
 /* Style the counter cards */
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
