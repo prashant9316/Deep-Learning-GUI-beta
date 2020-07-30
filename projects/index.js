@@ -1,10 +1,16 @@
 let container = document.getElementById('add');
-
-for (let i = 1; i <= 8; i++) {
+result = [{"Title":"Palm Angle Model", "Author":"Prashant Mishra","link":"https://prashant9316.github.io/"},
+			{"Title":"Project 2", "Author":"Sourav Mishra","link":"https://www.google.com"}]
+var len = 1;
+while(result.Title != null){
+	len += 1;
+}
+for (let i = 0; i <= len; i++) {
     let myDiv = document.createElement("div");
     myDiv.className = 'column';
+    console.log("Adding Project Card" + String(len));
 
-    myDiv.innerHTML = "<div class=\"card\"><h3> Card"+ i +"</h3><p>some text</p><p>some text</p></div>" 
+    myDiv.innerHTML = "<div class=\"card\"><h3>"+ result[i].Title +"</h3><p><a href="+result[i].link+">Author: "+result[i].Author+"</a></p><p>some text</p></div>" 
  
     container.appendChild(myDiv);
 }
