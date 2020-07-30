@@ -33,11 +33,11 @@ h1 {
 }
 
 .topnav {
-	height: 10vh;
 	width: auto;
 	text-align: left;
 	background-color: #000;
-  font-size: 3.5vw;
+  font-size: 37px;
+  padding-bottom: 10px;
 	font-family: Calibri;
 	font-weight: 700;
 	color: #E3E3E3;
@@ -111,6 +111,7 @@ body {
 }
 
 .model-name-container {
+  float: center;
 	margin-top: 20px;
 	display: inline-block;
 	height: 50px;
