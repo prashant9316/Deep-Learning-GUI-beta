@@ -20,6 +20,7 @@
   content: "";
   display: table;
   clear: both;
+  text-align: center;
 }
 
 /* Responsive columns */
@@ -66,7 +67,7 @@
 /* Style the counter cards */
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
+  padding: 10px 16px 16px 16px;
   text-align: center;
   background-color: #847B7B;
   margin-bottom: 20px;
@@ -79,7 +80,8 @@
 }
 @media screen and (max-width: 500px) {
   .card {
-    width: 400px;
+    width: 250px;
+    display: inline-block;
     float: center;
   }
 }
@@ -106,6 +108,5 @@ p{
 .img {
   height: 50px;
   width: 50px;
-  text-align: center;
   border-radius: 50%;
 }
