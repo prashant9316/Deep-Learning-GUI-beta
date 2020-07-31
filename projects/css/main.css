@@ -58,7 +58,6 @@
 
 @media screen and (max-width: 500px) {
   .column {
-    margin-left: 20px;
     width: 100%;
     display: block;
     margin-bottom: 10px;
@@ -78,6 +77,13 @@
 .card:hover{
   box-shadow: 0 8px 16px 0 rgba(4,4,4,0.5);
 }
+@media screen and (max-width: 500px) {
+  .card {
+    width: 400px;
+    float: center;
+    margin-left: 50px;
+  }
+}
 
 a{
   color: black;
@@ -87,4 +93,20 @@ a{
 
 p{
   text-align: left;
+}
+.dot {
+  height: 50px;
+  width: 50px;
+  float: right;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: block;
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,1);
+}
+
+.img {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  border-radius: 50%;
 }
