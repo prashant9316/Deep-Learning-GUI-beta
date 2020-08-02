@@ -33,7 +33,6 @@ body, html {
 @media screen and (max-width: 650px) {
   .chat-output{
     width: 100vw;
-    height:100vh;
   }
 }
 
@@ -86,6 +85,7 @@ div{
   font-size: 20px;
   padding: 4px;
   border-radius: 20px;
+  bottom: 0;
 }
 .btnSubmit {
   border-radius: 50px;
