@@ -1,4 +1,4 @@
-var outputArea = document.getElementById("chat-output");
+var outputArea = $("#chat-output");
 
 $("#user-input-form").on("submit", function(e) {
   
@@ -15,7 +15,7 @@ $("#user-input-form").on("submit", function(e) {
   `);
   
   setTimeout(function() {
-    outputArea.appendChild(`
+    outputArea.append(`
       <div class='user-message'>
         <div class='message'>
           I'm like 20 lines of JavaScript I can't actually talk to you.
