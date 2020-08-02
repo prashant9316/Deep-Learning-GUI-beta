@@ -10,22 +10,31 @@ body, html {
   text-align: center;
 
 }
-body {
+/*body {
   font-family: 'Source Sans Pro', sans-serif;
-  height: 100%;
-  height: 90vh;
   font-size: 125%;
   display: inline-flex;
   flex-direction: column;
   margin: 10 auto;
+}*/
+.chat-window{
+  height: 80%;
+  display: inline-flex;
+  flex-direction: column;
 }
+
 .chat-output {
-  width: 100vw;
+  width: 700px;
   flex: 1;
   padding: 20px;
-  display: flex;
+  display: inline-block;
   background: black;
-  flex-direction: column;
+}
+@media screen and (max-width: 650px) {
+  .chat-output{
+    width: 100vw;
+    height:100vh;
+  }
 }
 
 div{
@@ -70,6 +79,7 @@ div{
 .chat-input {
   padding: 5px;
   background: #eee;
+  font-weight: bottom;
 }
 .user-input {
   width: 80%;
