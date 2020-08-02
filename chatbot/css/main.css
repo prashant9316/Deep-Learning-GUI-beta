@@ -25,11 +25,7 @@ body {
   background: black;
   flex-direction: column;
 }
-@media screen and (max-width: 600px){
-  .chat-output{
-    width: 100vw;
-  }
-}
+
 div{
   padding-bottom: 7px;
 }
@@ -76,7 +72,7 @@ div{
 }
 .user-input {
   width: 80%;
-  font-size: 1.7rem;
+  font-size: 20px;
   border: 1px solid #ccc;
   padding: 4px;
 }
