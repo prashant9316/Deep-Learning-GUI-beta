@@ -7,12 +7,7 @@ $("#user-input-form").on("submit", function(e) {
   var message = $("#user-input").val();
   
   outputArea.append(`<div class="bot-message"><div class="us-message">${message}</div></div>`);
-    /*<div class='bot-message'>
-      <div class='message'>
-        ${message}
-      </div>
-    </div>
-  `);*/
+
   
   setTimeout(function() {
     outputArea.append(`
