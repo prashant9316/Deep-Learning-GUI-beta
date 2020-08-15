@@ -103,6 +103,7 @@
     .split-right {
         display: block;
         width: 100%;
+        text-align: center;
     }
 }
 
@@ -181,6 +182,7 @@ h1 {
     .topnav a.icon {
         float: right;
         display: block;
+        background-color: white;
     }
 }
 
@@ -227,7 +229,6 @@ body {
 }
 
 .model-name-container {
-    float: center;
     margin-top: 20px;
     display: inline-block;
     height: 50px;
