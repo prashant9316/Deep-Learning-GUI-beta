@@ -1,15 +1,20 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
 * {
-  box-sizing: border-box;  
+    box-sizing: border-box;
 }
-html {
-  background: rgba(black, 0.03);
-  text-align: center;
-}
-body, html {
-  text-align: center;
 
+html {
+    background: rgba(black, 0.03);
+    text-align: center;
 }
+
+body,
+html {
+    overflow: hidden;
+    text-align: center;
+}
+
+
 /*body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 125%;
@@ -17,58 +22,68 @@ body, html {
   flex-direction: column;
   margin: 10 auto;
 }*/
-.chat-window{
-  height: 80%;
-  display: inline-flex;
-  flex-direction: column;
+
+div.scroll {
+    width: max-content;
+    height: 80vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.chat-window {
+    height: 80%;
+    display: inline-flex;
+    flex-direction: column;
 }
 
 .chat-output {
-  width: 700px;
-  flex: 1;
-  padding: 20px;
-  display: inline-block;
-  background: black;
-}
-@media screen and (max-width: 650px) {
-  .chat-output{
-    width: 100vw;
-  }
+    width: 700px;
+    flex: 1;
+    padding: 20px;
+    display: inline-block;
+    background: black;
 }
 
-div{
-  padding-bottom: 7px;
+@media screen and (max-width: 650px) {
+    .chat-output {
+        width: 100vw;
+    }
+}
+
+div {
+    padding-bottom: 7px;
 }
 
 .bot-message {
-  text-align: right;
-  box-shadow: 1px 1px 1px rgba(0,0,0,.5);
+    text-align: right;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
 }
 
 .us-message {
-  background-color: blue;
-  display: inline-block;
-  background: #0FB0DF;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 20px;
-  max-width: 400px;
+    background-color: blue;
+    display: inline-block;
+    background: #0FB0DF;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 20px;
+    max-width: 400px;
 }
 
-
 .intro-message {
-  background: #eee;
-  text-align: center;
+    background: #eee;
+    text-align: center;
     display: inline-block;
     padding: 12px 20px;
     border-radius: 10px;
 }
+
 .user-message {
-  text-align: left;
-  box-shadow: 1px 1px 1px rgba(0,0,0,.5);
+    text-align: left;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
 }
+
 .reply-message {
-  background: #eee;
+    background: #eee;
     display: inline-block;
     padding: 12px 20px;
     max-width: 400px;
@@ -76,20 +91,22 @@ div{
 }
 
 .chat-input {
-  padding: 5px;
-  background: #eee;
-  font-weight: bottom;
+    padding: 5px;
+    background: #eee;
+    font-weight: bottom;
 }
+
 .user-input {
-  width: 80%;
-  font-size: 20px;
-  padding: 4px;
-  border-radius: 20px;
-  bottom: 0;
+    width: 80%;
+    font-size: 20px;
+    padding: 4px;
+    border-radius: 20px;
+    bottom: 0;
 }
+
 .btnSubmit {
-  border-radius: 50px;
-  height: 30px;
-  width: 30px;
-  background-color: green;
+    border-radius: 50px;
+    height: 30px;
+    width: 30px;
+    background-color: green;
 }

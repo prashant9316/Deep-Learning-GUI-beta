@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Chatbot</title>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+    <title>Chatbot</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
+
 <body>
 
-<div class="header">
-	<div class="topnav" id="myTopnav">
-		Deep Learning GUI v0.1.3
-  		<a href="#about" class="active">About</a>
-  		<a href="#new">Create New</a>
-  		<a href="#profiles">Profiles</a>
-  		<a href="#projects">Projects</a>
-  		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  	</a>
-	</div>
-</div>
+    <div class="header">
+        <div class="topnav" id="myTopnav">
+            Deep Learning GUI v0.1.3
+            <a href="#about" class="active">About</a>
+            <a href="#new">Create New</a>
+            <a href="#profiles">Profiles</a>
+            <a href="#projects">Projects</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
 
 
-<div class="chat-window">
-<div class="chat-output" id="chat-output">
-  <div class="user-message">
-    <div class="intro-message">Hi! I'm a bot. What's up?</div>
-  </div>
-</div>
+    <div class="chat-window">
+        <div class="scroll">
+            <div class="chat-output" id="chat-output">
+                <div class="user-message">
+                    <div class="intro-message">Hi! I'm a bot. What's up?</div>
+                </div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <form action="#0" id="user-input-form">
+                <input id="user-input" class="user-input" placeholder="Talk to the bot.">
+            </form>
+        </div>
 
-<div class="chat-input">
-  <form action="#0" id="user-input-form">
-    <input id="user-input" class="user-input" placeholder="Talk to the bot.">
-  </form>
-</div>
-</div>
+    </div>
 </body>
 <footer>
-	<script type="text/javascript" src="js/index.js"></script>
-	<script type="text/javascript" src="js/nav.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/nav.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/nav.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </footer>
-</html>
 
+</html>
