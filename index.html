@@ -1,94 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Deep Learning GUI</title>
-	<link href="main/css/style.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Learning GUI</title>
+    <link href="main/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.0.2/dist/tfjs-vis.umd.min.js"></script>
     <script src="js/webcam.js"></script>
 </head>
-<body>
-	<div class="header">
-	<div class="topnav" id="myTopnav">
-		Deep Learning GUI v0.1.3
-  		<a href="#about" class="active">About</a>
-  		<a href="#new">Create New</a>
-  		<a href="#profiles">Profiles</a>
-  		<a href="#projects">Projects</a>
-  		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  	</a>
-	</div>
-</div>
-<div class="page">
-<div class="split-left">
-	<div class="body">
-		<div class="model-name-container">
-			<div class="model-name-text">Palm Angle Detection</div> 
-		</div>
-		<div class="webcam-container">
-			<div class="webcam-out">
-            	<video class="video" autoplay playsinline muted id="wc" width="400" height="300"></video>
 
-        	</div>
+<body>
+    <div class="header">
+        <div class="topnav" id="myTopnav">
+            Deep Learning GUI v0.1.3
+            <a href="#about" class="active">About</a>
+            <a href="#new">Create New</a>
+            <a href="#profiles">Profiles</a>
+            <a href="#projects">Projects</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
         </div>
     </div>
-    <div class="btn-container-1">
-    	<button class="button start" onclick="startPredicting()" >Start Predicting</button>
-	    <button class="button stop" onclick="stopPredicting()" >Stop Predicting</button>
-	    <button class="button download" onclick="saveModel()">Download Model</button>
-	    <div id="prediction" class="pred">Prediction will appear here</div>
+    <div class="page">
+        <div class="split-left">
+            <div class="body">
+                <div class="model-name-container">
+                    <div class="model-name-text">Palm Angle Detection</div>
+                </div>
+                <div class="webcam-container">
+                    <div class="webcam-out">
+                        <video class="video" autoplay playsinline muted id="wc" width="400" height="300"></video>
+
+                    </div>
+                </div>
+            </div>
+            <div class="btn-container-1">
+                <button class="button start" onclick="startPredicting()">Start Predicting</button>
+                <button class="button stop" onclick="stopPredicting()">Stop Predicting</button>
+                <button class="button download" onclick="saveModel()">Download Model</button>
+                <div id="prediction" class="pred">Prediction will appear here</div>
+            </div>
+            <div class="btn-container-1">
+                <button class="button see" onclick="showModel()">See Model Architecture</button>
+            </div>
+        </div>
+        <div class="split-line"></div>
+        <div class="split-right">
+            <div class="author">
+                <h1>About the Creator</h1>
+                <h2>Publisher: Prashant Mishra</h2>
+                <h3>Date: 23 June 2020</h3>
+                <h3>Last updated: 23 June 2020</h3>
+                <p>This model is used to detect palm angles. Currently it can detect 5 angles 0, 45, -45, 90, -90. Also, it works best for left hand. So please use your left hand.</p>
+                <p>The test set accuracy is 95%</p>
+                <div class="visit-profile">
+                    <a href="https://github.com/prashant9316" class="button profile" target="_blank">Visit Profile</a>
+                </div>
+                <div class="horizontal-split"></div>
+                <div class="promotion">
+                    <h2>Want to share your own AI model?</h2>
+                    <p>Click here to get started in just 2 minutes!</p>
+                    <a href="get_started.html" class="button new">Get Your Now</a>
+                </div>
+
+            </div>
+        </div>
+
+
     </div>
-    <div class="btn-container-1">
-    	<button class="button see" onclick="showModel()">See Model Architecture</button>
-    </div>
-</div>
-<div class="split-line"></div>
-<div class="split-right">
-	<div class="author">
-		<h1>About the Creator</h1>
-		<h2>Publisher: Prashant Mishra</h2>
-		<h3>Date: 23 June 2020</h3>
-		<h3>Last updated: 23 June 2020</h3>
-		<p>This model is used to detect palm angles. Currently it can detect 5 angles 0, 45, -45, 90, -90. Also, it works best for left hand. So please use your left hand.</p>
-		<p>The test set accuracy is 95%</p>
-		<div class="visit-profile">
-			<a href="https://github.com/prashant9316" class="button profile" target="_blank">Visit Profile</a>
-		</div>
-		<div class="horizontal-split"></div>
-		<div class="promotion">
-			<h2>Want to share your own AI model?</h2>
-			<p>Click here to get started in just 2 minutes!</p>
-			<a href="get_started.html" class="button new">Get Your Now</a>
-		</div>
-		
-	</div>
-</div>
-        
-		
-</div>	
 </body>
 <footer>
-	
-	<div class="row">
+
+    <div class="row">
         <p>Build with <i class="fa fa-heart-o" aria-hidden="true"></i> by Parshant Mishra
             <br>All rights Reserved
         </p>
     </div>
 
-<div class="row">
-    <div class="footer-social d-flex align-items-center">
-     <p>Let us be social</p>
-		<a href="https://github.com/prashant9316" target = "_blank" ><i class="fa fa-github"></i></a>
-	    <a href="https://www.instagram.com/_quarantineed/" target = "_blank" ><i class="fa fa-instagram"></i></a>
-	    <a href="https://facebook.com/pgmd.9873/" target="_blank" ><i class="fa fa-facebook-square"></i></a>
-	    <a href="https://www.linkedin.com/in/prashant-mishra-673365166/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+    <div class="row">
+        <div class="footer-social d-flex align-items-center">
+            <p>Let us be social</p>
+            <a href="https://github.com/prashant9316" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="https://www.instagram.com/_quarantineed/" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://facebook.com/pgmd.9873/" target="_blank"><i class="fa fa-facebook-square"></i></a>
+            <a href="https://www.linkedin.com/in/prashant-mishra-673365166/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        </div>
     </div>
-</div>
-	<script src="js/index.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+    <script src="main/js/index.js"></script>
+    <script type="text/javascript" src="main/js/main.js"></script>
 </footer>
+
 </html>

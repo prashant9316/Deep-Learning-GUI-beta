@@ -266,6 +266,8 @@ body {
 }
 
 .video {
+    height: 300px;
+    width: 400px;
     margin-left: auto;
     margin-top: auto;
     display: inline-block;

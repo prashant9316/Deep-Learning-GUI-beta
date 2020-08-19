@@ -30,6 +30,12 @@ div.scroll {
     overflow-y: auto;
 }
 
+@media screen and (max-width: 800px) {
+    div.scroll {
+        height: 90vh;
+    }
+}
+
 .chat-window {
     height: 80%;
     display: inline-flex;
